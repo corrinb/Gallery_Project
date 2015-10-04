@@ -4,9 +4,6 @@ class GalleriesController < ApplicationController
 
   def index
     @galleries = Gallery.all
-    @galleries.each do |gallery|
-      @submissions = gallery.submissions
-    end
   end
 
   def new

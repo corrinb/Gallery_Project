@@ -1,0 +1,9 @@
+<% @galleries.each do |gallery| %>
+  <%= gallery.theme %>
+  <br>
+  <% gallery.images.each do |image| %>
+    <%= image.submission %>
+  <% end %>
+  <br>
+  <br>
+<% end %>

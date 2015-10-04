@@ -3,7 +3,7 @@ class Image < ActiveRecord::Base
   belongs_to :gallery
 
   validates :user_id, presence: true
-  validates :gallery_id, prsence: true
+  validates :gallery_id, presence: true
   validates :submission, presence: true
-  validates :title, prsence: true
+  validates :title, presence: true
 end
