@@ -2,7 +2,7 @@
   <%= gallery.theme %>
   <br>
   <% gallery.images.each do |image| %>
-    <%= image.submission %>
+    <%= link_to (image.submission), gallery_image_path(gallery, image) %>
   <% end %>
   <br>
   <br>

@@ -20,4 +20,10 @@ FactoryGirl.define do
     submission "mermaid.png"
     title "Beatiful Mermaid"
   end
+
+  factory :comment do
+    user
+    image
+    body "This mermaid is beautiful"
+  end
 end
