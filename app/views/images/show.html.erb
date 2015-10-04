@@ -1,0 +1,12 @@
+<%= @image.submission %>
+<%= @image.user.username %>
+<%= @image.title %>
+
+<table style="width:100%">
+<% @image.comments.each do |comment| %>
+  <tr>
+    <td><%= comment.user.username %></td>
+    <td><%= comment.body %></td>
+  </tr>
+<% end %>
+</table>
