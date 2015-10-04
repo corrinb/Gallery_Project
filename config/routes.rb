@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'homes#index'
+  root 'galleries#index'
   devise_for :users
 
   resources :galleries, except: [:show, :destroy]
