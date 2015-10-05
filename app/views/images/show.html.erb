@@ -1,5 +1,5 @@
 <%= @image.submission %>
-<%= @image.user.username %>
+<%=  link_to (@image.user.username), user_path(@image.user) %>
 <%= @image.title %>
 
 <table style="width:100%">

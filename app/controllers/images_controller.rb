@@ -12,6 +12,8 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(image_params)
+    @image.user = current_user
+    @image.gallery = current_gallery
     if @image.save
       flash[:accepted] = "Image Added!"
       redirect_to image_path(@image)
@@ -19,13 +21,6 @@ class ImagesController < ApplicationController
       flash[:errors] = @image.errors.full_messages.join(". ")
       render :new
     end
-  end
-
-  def edit
-    @image = Image.find(params[:id])
-  end
-
-  def update
   end
 
   protected
