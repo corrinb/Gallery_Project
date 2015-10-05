@@ -1,6 +1,6 @@
 == README
 
-![Build Status](https://codeship.com/projects/ef11e3b0-4da1-0133-838a-6e1cce453881/status?branch=master)![Code Climate](https://codeclimate.com/github/corrinb/Gallery_Project.png) ![Coverage Status](https://coveralls.io/repos/corrinb/Gallery_Project/badge.png)
+![Build Status](https://codeship.com/projects/e6982250-4da1-0133-fc6d-6e1cce453881/status?branch=master)![Code Climate](https://codeclimate.com/github/corrinb/Gallery_Project.png) ![Coverage Status](https://coveralls.io/repos/corrinb/Gallery_Project/badge.png)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

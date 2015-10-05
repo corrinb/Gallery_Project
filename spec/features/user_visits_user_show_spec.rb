@@ -12,7 +12,7 @@ feature 'user visits user show page', %{
 
   scenario 'user visits user show page' do
     user = FactoryGirl.create(:user)
-    image = FactoryGirl.create(:image)
+    image = FactoryGirl.create(:image, user: user)
 
     visit user_path(user)
 

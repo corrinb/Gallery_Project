@@ -1,10 +1,14 @@
 
 class UsersController < ApplicationController
-  before_action :authorize_user
+  # before_action :authorize_user
 
   def index
     @admins = User.where(role: "admin")
     @members = User.where(role: "member")
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   def update

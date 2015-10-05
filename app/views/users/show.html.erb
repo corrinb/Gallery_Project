@@ -1,5 +1,5 @@
-<%= user.username %>
+<%= @user.username %>
 
-<% user.images.each do |image| %>
+<% @user.images.each do |image| %>
   <%= link_to (image.submission), image_path(image) %>
 <% end %>
