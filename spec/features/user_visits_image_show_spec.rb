@@ -22,7 +22,6 @@ feature 'user visits image show page', %{
     expect(page).to have_content(image.submission)
     expect(page).to have_content(image.user.username)
     expect(page).to have_content(image.title)
-    save_and_open_page
 
     expect(page).to have_content(comment.user.username)
     expect(page).to have_content(comment.body)
