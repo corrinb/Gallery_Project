@@ -21,7 +21,7 @@ feature 'user visits image show page', %{
     visit gallery_image_path(gallery, image)
     save_and_open_page
 
-    expect(page).to have_content(image.submission)
+    expect(page).to have_css("img[src*='mermaid']")
     expect(page).to have_content(image.user.username)
     expect(page).to have_content(image.title)
 

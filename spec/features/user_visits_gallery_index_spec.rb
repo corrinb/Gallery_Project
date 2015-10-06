@@ -19,6 +19,6 @@ feature 'user visits gallery index', %{
     save_and_open_page
     
     expect(page).to have_content(gallery.theme)
-    expect(page).to have_content(image.submission)
+    expect(page).to have_css("img[src*='mermaid']")
   end
 end
