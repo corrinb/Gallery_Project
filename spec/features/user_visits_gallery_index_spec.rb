@@ -17,6 +17,6 @@ feature 'user visits gallery index', %{
 
     visit root_path
     expect(page).to have_content(gallery.theme)
-    expect(page).to have_content(image.submission)
+    expect(page).to have_xpath(image.submission)
   end
 end

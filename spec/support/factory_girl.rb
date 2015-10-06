@@ -17,7 +17,7 @@ FactoryGirl.define do
   factory :image do
     user
     gallery
-    submission "mermaid.png"
+    submission "mermaid.jpg"
     title "Beatiful Mermaid"
   end
 
