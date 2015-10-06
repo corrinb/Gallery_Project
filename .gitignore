@@ -16,3 +16,5 @@
 
 # Ignore uploaded files in test/development
 /public/uploads
+
+.env

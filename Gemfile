@@ -10,6 +10,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'foundation-rails'
 gem 'carrierwave'
+gem 'omniauth-facebook'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'rspec-rails'
