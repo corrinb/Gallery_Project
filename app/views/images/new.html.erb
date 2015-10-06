@@ -1,0 +1,7 @@
+<%= form_for @image do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "text-field" %>
+
+  <%= f.file_field :submission %>
+	<%= f.submit "Install Your Image", class: "submit-form" %>
+<% end %>

@@ -1,4 +1,6 @@
 class Image < ActiveRecord::Base
+  mount_uploader :submission, ImageSubmissionsUploader
+
   belongs_to :user
   belongs_to :gallery
   has_many :comments
