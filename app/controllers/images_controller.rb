@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
     @image.user = current_user
-    @image.gallery = current_gallery
+    @image.gallery = Gallery.current_gallery
     if @image.save
       flash[:accepted] = "Image Added!"
       redirect_to image_path(@image)
@@ -29,7 +29,7 @@ class ImagesController < ApplicationController
   # end
 
   def image_params
-    list = [:user, :gallery, :submission, :title]
+    list = [:submission, :title]
     params.require(:image).permit(list)
   end
 end
