@@ -12,12 +12,14 @@ feature 'user visits image show page', %{
   # * image page must show comments
 
   scenario 'user visits image show page' do
-    FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user)
     gallery = FactoryGirl.create(:gallery)
-    image = FactoryGirl.create(:image)
+    image = Image.create(user: user, gallery: gallery, submission: 'mermaid.jpg', title: 'Mermaid')
+    # image = FactoryGirl.create(:image)
     comment = FactoryGirl.create(:comment, image: image)
 
     visit gallery_image_path(gallery, image)
+    save_and_open_page
 
     expect(page).to have_content(image.submission)
     expect(page).to have_content(image.user.username)

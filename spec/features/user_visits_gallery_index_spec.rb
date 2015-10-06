@@ -16,6 +16,8 @@ feature 'user visits gallery index', %{
     image = FactoryGirl.create(:image)
 
     visit root_path
+    save_and_open_page
+    
     expect(page).to have_content(gallery.theme)
     expect(page).to have_content(image.submission)
   end
