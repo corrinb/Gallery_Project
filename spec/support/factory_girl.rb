@@ -17,7 +17,8 @@ FactoryGirl.define do
   factory :image do
     user
     gallery
-    submission { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec', 'support', 'images', 'mermaid.jpg')) }
+    submission { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec',
+      'support', 'images', 'mermaid.jpg')) }
     title "Beatiful Mermaid"
   end
 
