@@ -1,5 +1,10 @@
 <% @galleries.each do |gallery| %>
   <%= gallery.theme %>
+
+  <% if gallery == Gallery.current_gallery %>
+    <%= link_to 'Add an Image', new_image_path %>
+  <% end %>
+
   <br>
   <% gallery.images.each do |image| %>
     <%= link_to (image_tag(image.submission)), gallery_image_path(gallery, image) %>
