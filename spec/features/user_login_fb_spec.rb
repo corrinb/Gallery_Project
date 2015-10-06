@@ -24,5 +24,5 @@ feature 'user logs in through facebook', %{
       expect(page).to_not have_content("Sign In")
       expect(page).to_not have_content("Sign In With Facebook")
       expect(page).to have_link("Sign Out", href: destroy_user_session_path)
-    end
+  end
 end

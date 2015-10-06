@@ -12,7 +12,7 @@ feature 'user visits image show page', %{
   # * image page must show comments
 
   scenario 'user visits image show page' do
-    user = FactoryGirl.create(:user)
+    FactoryGirl.create(:user)
     gallery = FactoryGirl.create(:gallery)
     image = FactoryGirl.create(:image)
     comment = FactoryGirl.create(:comment, image: image)
