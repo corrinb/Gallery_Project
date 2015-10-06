@@ -14,12 +14,10 @@ feature 'user visits image show page', %{
   scenario 'user visits image show page' do
     user = FactoryGirl.create(:user)
     gallery = FactoryGirl.create(:gallery)
-    image = Image.create(user: user, gallery: gallery, submission: 'mermaid.jpg', title: 'Mermaid')
-    # image = FactoryGirl.create(:image)
+    image = FactoryGirl.create(:image)
     comment = FactoryGirl.create(:comment, image: image)
 
     visit gallery_image_path(gallery, image)
-    save_and_open_page
 
     expect(page).to have_css("img[src*='mermaid']")
     expect(page).to have_content(image.user.username)

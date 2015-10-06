@@ -20,7 +20,6 @@ feature 'user logs in through facebook', %{
 
       visit root_path
       click_link "Sign In With Facebook"
-      save_and_open_page
 
       expect(page).to_not have_content("Sign In")
       expect(page).to_not have_content("Sign In With Facebook")
