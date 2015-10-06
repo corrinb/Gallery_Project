@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'galleries#index'
+
   devise_for :users
   resources :users, only: [:show]
 
@@ -10,5 +11,8 @@ Rails.application.routes.draw do
   resources :images, except: [:index]
 
   resources :comments, except: [:index, :show]
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/sign_out', to: 'sessions#destroy'
 
 end
