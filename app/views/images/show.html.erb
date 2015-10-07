@@ -9,4 +9,16 @@
     <td><%= comment.body %></td>
   </tr>
 <% end %>
+
+  <tr><% if current_user %>
+    <td><%= current_user.username %></td>
+    <td>
+
+      <%= form_for @comment do |f| %>
+        <%= f.text_field :body %>
+      	<%= f.submit "Install Your Image" %>
+      <% end %>
+
+    </td>
+  <% end %></tr>
 </table>
