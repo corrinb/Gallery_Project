@@ -12,6 +12,8 @@ gem 'foundation-rails'
 gem 'carrierwave'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
+gem 'sidekiq'
+gem 'sidetiq'
 
 group :development, :test do
   gem 'rspec-rails'
