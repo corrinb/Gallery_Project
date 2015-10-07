@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :comments, except: [:index, :show]
 
+  resources :themes, only: [:index, :create]
+
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/sign_out', to: 'sessions#destroy'
 

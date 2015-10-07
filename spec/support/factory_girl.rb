@@ -27,4 +27,9 @@ FactoryGirl.define do
     image
     body "This mermaid is beautiful"
   end
+
+  factory :theme do
+    title 'Abstract Mermaids'
+    vote_count 21
+  end
 end

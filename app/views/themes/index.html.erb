@@ -1,0 +1,10 @@
+<% @themes.each do |theme| %>
+  <li><%= theme.title %></li>
+<% end %>
+
+<%= form_for @theme do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+	<%= f.submit "Nominate a Gallery Theme" %>
+<% end %>
