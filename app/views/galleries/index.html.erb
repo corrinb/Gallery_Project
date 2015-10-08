@@ -1,14 +1,18 @@
-<% @galleries.each do |gallery| %>
-  <%= gallery.theme %>
+<%= link_to ('Suggest A Gallery Theme'), themes_path %>
 
-  <% if gallery == Gallery.current_gallery %>
-    <%= link_to 'Add an Image', new_image_path %>
-  <% end %>
+<div>
+  <% @galleries.each do |gallery| %>
+    <%= gallery.theme %>
 
-  <br>
-  <% gallery.images.each do |image| %>
-    <%= link_to (image_tag(image.submission)), gallery_image_path(gallery, image) %>
+    <% if gallery == Gallery.current_gallery %>
+      <%= link_to 'Add an Image', new_image_path %>
+    <% end %>
+
+    <br>
+    <% gallery.images.each do |image| %>
+      <%= link_to (image_tag(image.submission)), gallery_image_path(gallery, image) %>
+    <% end %>
+    <br>
+    <br>
   <% end %>
-  <br>
-  <br>
-<% end %>
+</div>

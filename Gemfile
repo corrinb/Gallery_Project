@@ -13,8 +13,6 @@ gem 'carrierwave'
 gem 'fog'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
-gem 'sidekiq', '3.4.2'
-gem 'sidetiq'
 
 group :development, :test do
   gem 'rspec-rails'

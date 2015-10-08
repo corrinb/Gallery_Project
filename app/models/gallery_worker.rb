@@ -1,10 +1,5 @@
 class GalleryWorker
-  include Sidekiq::Worker
-  include Sidetiq::Schedulable
-
-  recurrence { minutely(1) }
-
-  def perform()
+  def self.create_gallery
     gallery = Gallery.new
     gallery.theme = Theme.highest_vote.title
     gallery.start_date = Date.today
