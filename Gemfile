@@ -10,6 +10,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'foundation-rails'
 gem 'carrierwave'
+gem 'fog'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem 'sidekiq', '3.4.2'
