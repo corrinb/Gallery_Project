@@ -1,5 +1,18 @@
-<% @themes.each do |theme| %>
-  <li><%= theme.title %></li>
+<% @themes.each do |info| %>
+  <li>
+    <%= info[:theme].title %>
+
+    <% id_attr = if info[:vote]
+      "vote_id=#{info[:vote].id}"
+    else
+      "theme_id=#{info[:theme].id}"
+    end %>
+
+    <button <%= id_attr %> class="vote">
+        <%= info[:button_type] %>
+    </button>
+
+  </li>
 <% end %>
 
 <%= form_for @theme do |f| %>
