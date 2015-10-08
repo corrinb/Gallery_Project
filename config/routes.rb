@@ -8,9 +8,9 @@ Rails.application.routes.draw do
     resources :images, only: [:show]
   end
 
-  resources :images, except: [:index]
-
-  resources :comments, except: [:index, :show]
+  resources :images, only: [:show, :new, :create] do
+    resources :comments, only: [:create]
+  end
 
   resources :themes, only: [:index, :create]
 
