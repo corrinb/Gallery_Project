@@ -14,7 +14,8 @@ Rails.application.routes.draw do
 
   resources :themes, only: [:index, :create]
 
+  resources :votes, only: [:create, :destroy]
+
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/sign_out', to: 'sessions#destroy'
-
 end
