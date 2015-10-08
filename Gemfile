@@ -12,7 +12,7 @@ gem 'foundation-rails'
 gem 'carrierwave'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
-gem 'sidekiq'
+gem 'sidekiq', '3.4.2'
 gem 'sidetiq'
 
 group :development, :test do
