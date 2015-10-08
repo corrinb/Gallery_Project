@@ -1,23 +1,34 @@
-<% @themes.each do |info| %>
-  <li>
-    <%= info[:theme].title %>
+<div class='row'>
+  <div class='small-12 columns'>
+    <h1> Have an idea for a future exhibition? </h1>
+    <h3> Share your thoughts by nominating a gallery theme, </h3>
+    <h3> or by voting on a suggestion from another user! </h3>
+  </div>
+</div>
 
-    <% id_attr = if info[:vote]
-      "vote_id=#{info[:vote].id}"
-    else
-      "theme_id=#{info[:theme].id}"
-    end %>
+<div class='row'>
+  <div class='small-12 columns'>
+    <% @themes.each do |info| %>
+      <li>
+        <%= info[:theme].title %>
 
-    <button <%= id_attr %> class="vote">
-        <%= info[:button_type] %>
-    </button>
+        <% id_attr = if info[:vote]
+          "vote_id=#{info[:vote].id}"
+        else
+          "theme_id=#{info[:theme].id}"
+        end %>
 
-  </li>
-<% end %>
+        <button <%= id_attr %> class="vote">
+            <%= info[:button_type] %>
+        </button>
 
-<%= form_for @theme do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+      </li>
+    <% end %>
 
-	<%= f.submit "Nominate a Gallery Theme" %>
-<% end %>
+    <%= form_for @theme do |f| %>
+      <%= f.text_field :title %>
+
+    	<%= f.submit "Nominate a Gallery Theme" %>
+    <% end %>
+  </div>
+</div>
