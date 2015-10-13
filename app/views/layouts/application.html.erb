@@ -2,12 +2,14 @@
 <html>
 <head>
   <title>Galleries</title>
+  <link href='https://fonts.googleapis.com/css?family=Istok+Web:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <nav class="top-bar">
+  <div class="contain-to-grid full-top-bar">
+  <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">Galleries</a></h1>
@@ -16,22 +18,37 @@
 
     <section class="top-bar-section">
       <ul class="right">
+
+        <li class="has-dropdown">
+          <a href="#">Galleries</a>
+          <ul class="dropdown">
+            <li><%= link_to 'Past', galleries_path %></li>
+            <li><%= link_to 'Present', gallery_path(Gallery.current_gallery) %></li>
+            <li><%= link_to 'Future', themes_path %></li>
+          </ul>
+        </li>
+
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
           <li><%= link_to 'Sign In', new_user_session_path %></li>
-          <li><%= link_to 'Sign In With Facebook', '/auth/facebook' %></li>
         <%- end -%>
       </ul>
     </section>
   </nav>
+  </div>
 
+
+<div class="row">
+<div class="small-10 columns">
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
     </div>
   <%- end -%>
+</div>
+</div>
 
   <%= yield %>
 

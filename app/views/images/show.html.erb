@@ -1,7 +1,18 @@
-<%= image_tag(@image.submission) %>
-<%=  link_to (@image.user.username), user_path(@image.user) %>
-<%= @image.title %>
+<div class="row">
+<div class="small-10 columns">
+  <h1><%= @image.title %></h1>
+  <%=  link_to (@image.user.username), user_path(@image.user) %>
+</div>
+</div>
 
+<div class="row">
+  <%= image_tag(@image.submission, :class => "centered-image") %>
+</div>
+<br>
+
+
+<div class="row">
+<div class="small-12 columns">
 <table style="width:100%">
 <% @image.comments.each do |comment| %>
   <tr>
@@ -15,10 +26,14 @@
     <td>
 
       <%= form_for [@image, @comment] do |f| %>
-        <%= f.text_field :body %>
-      	<%= f.submit "Comment" %>
+      <div class="row collapse">
+        <div class="small-10 columns"><%= f.text_field :body %></div>
+      	<div class="small-2 columns"><%= f.submit "Comment", :class => 'tiny button prefix' %></div>
+      </div>
       <% end %>
 
     </td>
   <% end %></tr>
 </table>
+</div>
+</div>

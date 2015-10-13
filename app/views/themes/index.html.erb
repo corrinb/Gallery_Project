@@ -18,7 +18,7 @@
           "theme_id=#{info[:theme].id}"
         end %>
 
-        <button <%= id_attr %> class="vote">
+        <button <%= id_attr %> class="vote tiny secondary pickle">
             <%= info[:button_type] %>
         </button>
 
@@ -26,9 +26,10 @@
     <% end %>
 
     <%= form_for @theme do |f| %>
-      <%= f.text_field :title %>
-
-    	<%= f.submit "Nominate a Gallery Theme" %>
+    <div class="row collapse">
+      <div class="small-6 columns"><%= f.text_field :title %></div>
+      <div class="small-2 columns end"><%= f.submit "Nominate a Gallery Theme", :class => 'button prefix tiny' %></div>
+    </div>
     <% end %>
   </div>
 </div>

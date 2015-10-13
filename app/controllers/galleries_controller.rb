@@ -5,4 +5,8 @@ class GalleriesController < ApplicationController
     @galleries = Gallery.order(start_date: :desc)
   end
 
+  def show
+    @gallery = Gallery.current_gallery
+  end
+
 end

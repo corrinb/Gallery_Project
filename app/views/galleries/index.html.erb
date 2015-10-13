@@ -1,18 +1,22 @@
-<%= link_to ('Suggest A Gallery Theme'), themes_path %>
+<div class="row">
+<div class="small-10 columns">
+
+<br>
+<p>At this point in time, there are no past galleries.</p>
 
 <div>
   <% @galleries.each do |gallery| %>
-    <%= gallery.theme %>
-
     <% if gallery == Gallery.current_gallery %>
-      <%= link_to 'Add an Image', new_image_path %>
+      <% next %>
     <% end %>
 
-    <br>
-    <% gallery.images.each do |image| %>
-      <%= link_to (image_tag(image.submission)), gallery_image_path(gallery, image) %>
-    <% end %>
-    <br>
+    <%= gallery.theme %>
+    <%= gallery.start_date.month %>
+    <%= gallery.start_date.year %>
+
     <br>
   <% end %>
+</div>
+
+</div>
 </div>

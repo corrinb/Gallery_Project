@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  root 'galleries#index'
+  root 'galleries#show'
 
   devise_for :users
   resources :users, only: [:show]
 
-  resources :galleries, only: [:index] do
+  resources :galleries, only: [:index, :show] do
     resources :images, only: [:show]
   end
 

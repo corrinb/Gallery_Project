@@ -88,6 +88,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$font-family-sans-serif: "Istok Web", sans-serif;
 // $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
@@ -113,6 +114,7 @@ $include-html-global-classes: $include-html-classes;
 // $tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
+$jet         : #180f0f;
 // $black       : #000000;
 
 // We use these as default colors throughout
@@ -122,6 +124,7 @@ $include-html-global-classes: $include-html-classes;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
+$primary-color: #718971;
 
 // We use these to control various global styles
 // $body-bg: $white;
@@ -129,6 +132,8 @@ $include-html-global-classes: $include-html-classes;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
+// $body-bg: #ECE4DB;
+$body-bg: #ededed;
 
 // We use this to control font-smoothing
 // $font-smoothing: antialiased;
@@ -439,6 +444,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to build padding for buttons.
 // $button-tny: rem-calc(10);
+$button-tny: rem-calc(8);
 // $button-sml: rem-calc(14);
 // $button-med: rem-calc(16);
 // $button-lrg: rem-calc(18);
@@ -1294,11 +1300,13 @@ $include-html-global-classes: $include-html-classes;
 // These control the background color for the table and even rows
 // $table-bg: $white;
 // $table-even-row-bg: $snow;
+$table-even-row-bg: #dfe1df;
 
 // These control the table cell border style
 // $table-border-style: solid;
 // $table-border-size: 1px;
 // $table-border-color: $gainsboro;
+$table-border-color: #4b3541;
 
 // These control the table head styles
 // $table-head-bg: $white-smoke;
@@ -1401,6 +1409,7 @@ $include-html-global-classes: $include-html-classes;
 
 // Background color for the top bar
 // $topbar-bg-color: $oil;
+$topbar-bg-color: #4b3541;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
