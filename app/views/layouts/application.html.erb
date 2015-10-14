@@ -12,7 +12,7 @@
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">Galleries</a></h1>
+        <h1><a href="/">Gallery 33</a></h1>
       </li>
     </ul>
 
@@ -22,9 +22,9 @@
         <li class="has-dropdown">
           <a href="#">Galleries</a>
           <ul class="dropdown">
-            <li><%= link_to 'Past', galleries_path %></li>
-            <li><%= link_to 'Present', gallery_path(Gallery.current_gallery) %></li>
-            <li><%= link_to 'Future', themes_path %></li>
+            <li><%= link_to 'Previous', galleries_path %></li>
+            <li><%= link_to 'Current', gallery_path(Gallery.current_gallery) %></li>
+            <li><%= link_to 'Upcoming', themes_path %></li>
           </ul>
         </li>
 
@@ -40,8 +40,8 @@
   </div>
 
 
-<div class="row">
-<div class="small-10 columns">
+<div>
+<div>
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>

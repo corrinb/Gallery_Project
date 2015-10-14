@@ -26,3 +26,15 @@
    border-color: #718971;
    border-width: thin;
  }
+
+ .text-block {
+   text-align: justify;
+ }
+
+ .flash {
+   background-color: white;
+   text-align: center;
+   color: #180f0f;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }

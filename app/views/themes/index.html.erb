@@ -1,13 +1,33 @@
 <div class='row'>
   <div class='small-12 columns'>
-    <h1> Have an idea for a future exhibition? </h1>
-    <h3> Share your thoughts by nominating a gallery theme, </h3>
-    <h3> or by voting on a suggestion from another user! </h3>
+    <br>
+    <h2> Upcoming Exhibition Nominations </h2>
+    <br>
+
+    <div class='row text-block'>
+    <div class='small-10 columns'>
+    <p >
+      At Gallery 33, our users are responsible for selecting the next exhibition theme!  Please contribute by nominating a gallery theme below, or by voting on a suggestion from another user.  At the end of each month, the nomination with the highest vote count will be implemented as our newest exhibition.
+    </p>
+    <p>
+      Think about themes that could inspire your art practice.  Feel free to suggest subject matter, specific materials, or artistic constraints.
+    </p>
+    </div>
+    </div>
+
+  </div>
   </div>
 </div>
 
 <div class='row'>
   <div class='small-12 columns'>
+    <%= form_for @theme do |f| %>
+    <div class="row collapse">
+      <div class="small-6 columns"><%= f.text_field :title %></div>
+      <div class="small-2 columns end"><%= f.submit "Nominate a Gallery Theme", :class => 'button prefix tiny' %></div>
+    </div>
+    <% end %>
+
     <% @themes.each do |info| %>
       <li>
         <%= info[:theme].title %>
@@ -25,11 +45,5 @@
       </li>
     <% end %>
 
-    <%= form_for @theme do |f| %>
-    <div class="row collapse">
-      <div class="small-6 columns"><%= f.text_field :title %></div>
-      <div class="small-2 columns end"><%= f.submit "Nominate a Gallery Theme", :class => 'button prefix tiny' %></div>
-    </div>
-    <% end %>
   </div>
 </div>
