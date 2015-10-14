@@ -13,6 +13,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
+gem "mini_magick"
 
 group :development, :test do
   gem 'rspec-rails'
