@@ -15,6 +15,17 @@
  *= require foundation_and_overrides
 
  */
+ .picture-container {
+   background-image: url("/brushes.jpg");
+   background-position: center center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 35vh;
+  position: relative;
+  margin-top: 100px;
+ }
 
  .link-margins {
    margin-top: 25px;
@@ -24,10 +35,23 @@
  li {
    list-style-type: none;
  }
+
+ .boo {
+   font-family: 'Open Sans Condensed', sans-serif;
+   color: white;
+   font-size: 25rem;
+   /*float: left;*/
+   position: absolute;
+   top: -220px;
+   left: 20px;
+   line-height: normal;
+ }
+
  h1 {
    margin-top: 10px;
    margin-bottom: 15px;
  }
+
 
  .author-credit {
   float: right;
