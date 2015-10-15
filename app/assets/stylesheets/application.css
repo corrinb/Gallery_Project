@@ -37,19 +37,24 @@
  }
 
  .boo {
-   font-family: 'Open Sans Condensed', sans-serif;
+   font-family: 'Amiri', serif;
+   letter-spacing: -50px;
    color: white;
-   font-size: 25rem;
-   /*float: left;*/
+   font-size: 29rem;
    position: absolute;
-   top: -220px;
+   top: -200px;
    left: 20px;
    line-height: normal;
+ }
+
+ .squish {
+   line-height: 20%;
  }
 
  h1 {
    margin-top: 10px;
    margin-bottom: 15px;
+   font-family: 'Amiri', serif;
  }
 
 
