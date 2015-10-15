@@ -1,8 +1,6 @@
 <div class='row'>
   <div class='small-12 columns'>
-    <br>
-    <h2> Upcoming Exhibition Nominations </h2>
-    <br>
+    <h1> Upcoming Exhibition Nominations </h1>
 
     <div class='row text-block'>
     <div class='small-10 columns'>
@@ -30,8 +28,7 @@
 
     <% @themes.each do |info| %>
       <li>
-        <%= info[:theme].title %>
-
+        
         <% id_attr = if info[:vote]
           "vote_id=#{info[:vote].id}"
         else
@@ -41,6 +38,8 @@
         <button <%= id_attr %> class="vote tiny secondary pickle">
             <%= info[:button_type] %>
         </button>
+
+        <%= info[:theme].title %>
 
       </li>
     <% end %>
