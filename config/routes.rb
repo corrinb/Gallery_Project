@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'galleries#show'
+  root 'homes#index'
 
   devise_for :users
   resources :users, only: [:show]

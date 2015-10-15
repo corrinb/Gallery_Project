@@ -16,8 +16,24 @@
 
  */
 
+ .author-credit {
+  float: right;
+ }
+
+ .title {
+   text-align: center;
+ }
+
  .centered-image {
+   display: block;
+ }
+
+ .img-wrapper {
    margin: 0 auto;
+   max-width: 33vmax;
+ }
+
+ .large-image {
    display: block;
  }
 
@@ -38,3 +54,7 @@
    padding-top: 10px;
    padding-bottom: 10px;
  }
+
+  input.peanut {
+    margin: 0;
+  }
