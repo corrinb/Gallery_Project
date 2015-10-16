@@ -1,7 +1,7 @@
 <div class="row">
-<div class="small-10 columns">
+<div class="small-6 columns small-centered">
 
-<h1>At this point in time, there are no past galleries.</h1>
+<h1 class='title'>Click to Browse Previous Galleries</h1>
 
 <div>
   <ul>
@@ -10,8 +10,8 @@
         <% next %>
       <% end %>
 
-      <li>
-      <%= gallery.theme %>
+      <li class='title'>
+      <%= link_to (gallery.theme), gallery_path(gallery) %>
       (<%= gallery.start_date.strftime("%B") %>
       <%= gallery.start_date.year %>)
       </li>
