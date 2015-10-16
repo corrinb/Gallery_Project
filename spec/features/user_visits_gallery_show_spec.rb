@@ -13,7 +13,7 @@ feature 'user visits gallery show', %{
   scenario 'user visits gallery show' do
     user = FactoryGirl.create(:user)
     gallery = FactoryGirl.create(:gallery)
-    image = FactoryGirl.create(:image)
+    image = FactoryGirl.create(:image, gallery: gallery)
 
     visit gallery_path(gallery)
 

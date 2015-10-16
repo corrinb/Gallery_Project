@@ -20,7 +20,6 @@ feature 'user registers', %Q{
     fill_in 'Email', with: 'john@example.com'
     fill_in "user_password", with: 'password'
     fill_in 'Password confirmation', with: 'password'
-save_and_open_page
     click_button 'Sign up'
 
     expect(page).to have_content('Welcome! You have signed up successfully.')
