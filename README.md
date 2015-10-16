@@ -1,4 +1,4 @@
-== README
+
 
 ![Build Status](https://codeship.com/projects/e6982250-4da1-0133-fc6d-6e1cce453881/status?branch=master)![Code Climate](https://codeclimate.com/github/corrinb/Gallery_Project.png) ![Coverage Status](https://coveralls.io/repos/corrinb/Gallery_Project/badge.png)
 
