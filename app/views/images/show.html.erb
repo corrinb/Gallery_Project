@@ -20,13 +20,27 @@
 <table style="width:100%">
 <% @image.comments.each do |comment| %>
   <tr>
-    <td><%= link_to (comment.user.username), user_path(comment.user) %></td>
+    <td width="300">
+      <% if comment.user.profile_pic.present? %>
+        <%= image_tag(comment.user.profile_pic.thumb, :class => "profile-thumb") %>
+      <% else %>
+        <%= image_tag("/maggie-smith.jpg", :class => "profile-thumb") %>
+      <% end %>
+      <%= link_to (comment.user.username), user_path(comment.user) %>
+    </td>
     <td><%= comment.body %></td>
   </tr>
 <% end %>
 
   <tr><% if current_user %>
-    <td><%= current_user.username %></td>
+    <td>
+      <% if current_user.profile_pic.present? %>
+        <%= image_tag(current_user.profile_pic.thumb, :class => "profile-thumb") %>
+      <% else %>
+        <%= image_tag("/maggie-smith.jpg", :class => "profile-thumb") %>
+      <% end %>
+      <%= current_user.username %>
+    </td>
     <td>
 
       <%= form_for [@image, @comment] do |f| %>

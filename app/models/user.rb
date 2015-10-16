@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  mount_uploader :profile_pic, ProfilePhotoUploader
+
   has_many :images
   has_many :comments
   has_many :votes

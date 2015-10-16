@@ -1,6 +1,5 @@
 class ImagesController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  # before_action :authorize_user, only: [:edit, :update, :destroy]
 
   def show
     @image = Image.find(params[:id])
@@ -25,9 +24,6 @@ class ImagesController < ApplicationController
   end
 
   protected
-
-  # def authorize_user
-  # end
 
   def image_params
     list = [:submission, :title]

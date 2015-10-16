@@ -1,4 +1,6 @@
 class ThemesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @themes = []
     Theme.order(vote_count: :desc).each do |theme|
