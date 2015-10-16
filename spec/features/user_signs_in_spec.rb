@@ -7,6 +7,7 @@ feature 'user signs in', %Q{
 } do
   scenario 'specify valid credentials' do
     user = FactoryGirl.create(:user)
+    FactoryGirl.create(:gallery)
 
     visit new_user_session_path
 
@@ -20,6 +21,7 @@ feature 'user signs in', %Q{
   end
 
   scenario 'specify invalid credentials' do
+    FactoryGirl.create(:gallery)
     visit new_user_session_path
 
     click_button 'Log in'

@@ -12,6 +12,8 @@ FactoryGirl.define do
 
   factory :gallery do
     theme 'aquatic'
+    start_date (Date.today - 1.day)
+    end_date (Date.today + 1.day)
   end
 
   factory :image do

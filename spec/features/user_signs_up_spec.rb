@@ -13,12 +13,14 @@ feature 'user registers', %Q{
   #   an error message
 
   scenario 'provide valid registration information' do
+    FactoryGirl.create(:gallery)
+
     visit new_user_registration_path
 
     fill_in 'Email', with: 'john@example.com'
-    fill_in 'Password', with: 'password'
+    fill_in "user_password", with: 'password'
     fill_in 'Password confirmation', with: 'password'
-
+save_and_open_page
     click_button 'Sign up'
 
     expect(page).to have_content('Welcome! You have signed up successfully.')
@@ -26,6 +28,7 @@ feature 'user registers', %Q{
   end
 
   scenario 'provide invalid registration information' do
+    FactoryGirl.create(:gallery)
     visit new_user_registration_path
 
     click_button 'Sign up'

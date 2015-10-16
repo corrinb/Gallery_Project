@@ -16,13 +16,13 @@ feature 'user logs in through facebook', %{
   # end
 
   scenario "facebook authenticates user" do
+      FactoryGirl.create(:gallery)
       mock_facebook_auth!
 
-      visit root_path
+      visit new_user_session_path
       click_link "Sign In With Facebook"
 
       expect(page).to_not have_content("Sign In")
-      expect(page).to_not have_content("Sign In With Facebook")
       expect(page).to have_link("Sign Out", href: destroy_user_session_path)
   end
 end

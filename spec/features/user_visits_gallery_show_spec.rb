@@ -1,21 +1,21 @@
 require 'rails_helper'
 
-feature 'user visits gallery index', %{
+feature 'user visits gallery show', %{
   As a user
-  I want to visit the gallery index
-  So that I can see a list of galleries
+  I want to visit the gallery show
+  So that I can see a gallery and its images
 } do
 
   # Acceptance Criteria:
-  # * gallery index must be root directory
+  # * gallery theme is shown
   # * user can also see all image submssions for each gallery
 
-  scenario 'user visits root path' do
+  scenario 'user visits gallery show' do
     user = FactoryGirl.create(:user)
     gallery = FactoryGirl.create(:gallery)
     image = FactoryGirl.create(:image)
 
-    visit root_path
+    visit gallery_path(gallery)
 
     expect(page).to have_content(gallery.theme)
     expect(page).to have_css("img[src*='mermaid']")
