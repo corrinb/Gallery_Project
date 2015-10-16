@@ -18,6 +18,8 @@
 
 <div class="row">
 <div class="small-10 columns">
+  <% if @gallery == Gallery.current_gallery %>
   <%= link_to 'Add an Image', new_image_path, :class => "link-margins" %>
+  <% end %>
 </div>
 </div>
