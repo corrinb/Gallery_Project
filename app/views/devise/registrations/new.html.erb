@@ -18,12 +18,7 @@
 
   <div class="field squish">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autofocus: true %>
-  </div>
-
-  <div class="field squish">
-    <%= f.label :profile_pic %><br />
-    <%= f.text_field :profile_pic, autofocus: true %>
+    <%= f.text_field :username %>
   </div>
 
   <div class="field squish">
@@ -36,6 +31,11 @@
   <div class="field squish">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="field squish">
+    <%= f.label :profile_pic %><br />
+    <%= f.file_field :profile_pic %>
   </div>
 
   <div class="actions">

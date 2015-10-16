@@ -15,6 +15,19 @@
  *= require foundation_and_overrides
 
  */
+
+ .profile-thumb {
+   width: 50px;
+   height: 50px;
+   margin-right: 15px;
+ }
+
+ .profile-nav {
+   width: 30px;
+   height: 30px;
+   margin-top: 7px;
+ }
+
  .picture-container {
    background-image: url("/brushes.jpg");
    background-position: center center;
