@@ -2,29 +2,8 @@
 
 ![Build Status](https://codeship.com/projects/e6982250-4da1-0133-fc6d-6e1cce453881/status?branch=master)![Code Climate](https://codeclimate.com/github/corrinb/Gallery_Project.png) ![Coverage Status](https://coveralls.io/repos/corrinb/Gallery_Project/badge.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Gallery 33 is a virtual gallery space providing artists with themes, deadlines, and the ability to communicate with other users. This Rails application offers monthly exhibitions where users can submit and view artwork, as well as message boards for comments and constructive criticism.
 
-Things you may want to cover:
+The app uses AJAX requests to enable user voting, Heroku Scheduler to create montly exhibition themes, CarrierWave for image uploads, and OmniAuth for optional Facebook login.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+http://gallery-33.herokuapp.com/
