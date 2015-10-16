@@ -1,19 +1,16 @@
 <div class="row">
-<div class="small-10 columns">
-<br>
-<h3><%= "Submit an Image to the #{Gallery.current_gallery.theme} Exhibition" %></h3>
-<br>
+<div class="small-6 columns small-centered">
+
+<h1 class='title'><%= "Submit an Image to #{Gallery.current_gallery.theme} " %></h1>
+
   <%= form_for @image do |f| %>
-    <div class="row">
-    <div class="small-6 columns end">
 
     <%= f.label :title %>
     <%= f.text_field :title, class: "text-field" %>
 
     <%= f.file_field :submission %>
   	<%= f.submit "Install Your Image", class: "submit-form  tiny button" %>
-    </div>
-    </div>
   <% end %>
+  
 </div>
 </div>
