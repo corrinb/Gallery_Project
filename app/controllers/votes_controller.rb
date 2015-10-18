@@ -1,5 +1,4 @@
 class VotesController < ApplicationController
-
   def create
     theme = Theme.find(params[:theme_id])
     vote = Vote.find_or_create_by(theme: theme, user: current_user)
@@ -20,5 +19,4 @@ class VotesController < ApplicationController
       format.json { render json: theme }
     end
   end
-
 end
